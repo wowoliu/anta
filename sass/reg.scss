@@ -42,40 +42,32 @@ img{ vertical-align: middle;}
 }
 /*------------lun-------------------*/
 .lun{
-    width: 1900px;
-    height: 650px;
-    overflow: hidden;
-}
-.lun img{
-    height: 600px;
-    width: 1900px;
+   position: relative;
+     height: 650px;
     
+ }
+.lun .pp{
+    height: 450px;
+    width: 450px;
+    background-color:white;
+    position: absolute;
+    top: 30px;
+    left: 1300px;
 }
-.lun .tu{
-    width: 6000px;
-    height: 600px;
+.lun .pp #username{
+    width: 300px;
+    height: 30px;
+    margin-top: 35px;
+    margin-bottom: 20px;
 }
-.lun .tu img{
-    float: left;
-    height: 550px;
+.lun .pp #psw{
+    width: 200px;
+    height: 30px;
+    margin-bottom: 20px;
 }
 
-.lun .dian{
-    width: 1900px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    
-}
-.lun .dian div{
-    height: 10px;
-    width: 10px;
-    background: black;
-    margin: 5px;
-    float: left;
-    border-radius: 50%;
-      
-}
-.lun .dian div:hover{
-    background-color: red;
-}
+
+
+
+
+

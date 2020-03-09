@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="libs/jquery-1.11.0.js"></script>
+</head>
+<body>
+    用户名<input type="text">
+    密码<input type="password">
+    <input type="button" value="登陆" id="loginbtn">
+    <script>
+        $(function(){
+            $("#loginbtn").click(function(){
+                $.get("http://jx.xuzhixiang.top/ap/api/login.php",{
+                    username:$("input").eq(0).val(),
+                    password:$("input").eq(1).val()
+
+                },data => {
+                    if(data.code == 1){
+                        location.href = "index.html"
+                    }
+                    else{
+                        alert("用户名或者密码错误请重试")
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>
