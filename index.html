@@ -6,14 +6,17 @@
     <title>安踏</title>
     <link rel="stylesheet" href="css/index.css">
     <script src="libs/jquery-1.11.0.js"></script>
+    <script src="libs/startMove.js"></script>
+    <script src="js/index.js"></script>
+    
     <script src="js/reg.js"></script>
 </head>
 <body>
 <!-----------------deng-------------------------->
     <div class="deng">
        <nav>
-        <a href="">登陆</a>或
-        <a href="">注册</a>ANTA会员
+        <a href="login.html">登陆</a>或
+        <a href="reg.html">注册</a>ANTA会员
        </nav>
     </div>
 
@@ -34,20 +37,85 @@
         </div>
     </div>
 <!-----------------lun-------------------------->
-    <div class="lun">
-        <div class="tu">
-            <img src="imgs/1-KT5.jpg" >
-            <img src="imgs/2-paoxie.jpg">
-            <img src="imgs/3-xiuxian.jpg" >
-        </div>
-        <div class="dian">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            
-        </div>
-            
+    <div class="lun" id="lun">
+        <ul class="tu" id="tu">
+            <li><img src="imgs/1-KT5.jpg" ></li>
+            <li><img src="imgs/2-paoxie.jpg"></li>
+            <li><img src="imgs/3-xiuxian.jpg" ></li>
+            <li><img src="imgs/1-KT5.jpg" ></li>
+        </ul>
+
+        
+        
+         <!-- <ul class="dian" id="dian">
+             <li class="hover"></li>
+             <li></li>
+             <li></li>
+         </ul>
+             -->
     </div>
+    
+
+    
+    <script>
+    //     //获取轮播区域
+    //     let lun = document.getElementById("lun")//轮播区域
+    //     let tu = document.getElementById("tu")//轮播图片放置的ul
+    //     let tuList = tu.children//轮播图片列表
+    //     let perWidth = tuList[0].offsetWidth;//单位宽
+        
+    //     //设置ul宽度
+    //     tu.style.width = tuList.length*1900+"px";
+
+    //     let count = 0;
+    //     function move(){
+    //         count++;
+    //     if(count == tuList.length){
+    //         tu.style.left = 0;
+    //          count= 1;
+    //     }
+    //     //焦点类名的添加和移出
+    //     for(let i = 0;i<dianList.length;i++){
+    //         dianList[i].className="";
+    //     }
+    //     if(count == tuList.length-1 ){
+    //         dianList[0].className = "hover"
+    //     }else{
+    //         dianList[count].className="hover"
+    //     }
+    //     startMove(tu,{left:-perWidth*count});
+
+
+    // }
+
+
+    // let timer = setInterval(()=>{
+    //     move();
+    //     startMove(tu,{left:-perWidth*count});
+    // },2000)
+    // //焦点
+    // let dian = document.getElementById("dian");
+    // let dianList = dian.children;
+    // for(let i = 0;i<dianList.length;i++){
+    //     dianList[i].onclick = function(){
+    //         count = i-1;
+    //         move();
+    //     }
+    // }
+
+
+    // lun.onmouseover = function(){
+	// 	clearInterval(timer)
+    // }
+    // lun.onmouseout = function(){
+    //     timer = setInterval(()=>{
+    //         move();
+    //     },2000)
+    // }
+    let lunbo = new Lunbo();
+     lunbo.addBtn(); 
+     lunbo.addFocus(); 
+
+     </script>
 </body>
 </html>

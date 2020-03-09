@@ -42,40 +42,67 @@ img{ vertical-align: middle;}
 }
 /*------------lun-------------------*/
 .lun{
+    position: relative;
     width: 1900px;
     height: 650px;
     overflow: hidden;
+    
 }
 .lun img{
     height: 600px;
     width: 1900px;
-    
 }
 .lun .tu{
-    width: 6000px;
-    height: 600px;
+    position: absolute;
+   
 }
-.lun .tu img{
+.lun .tu li{
     float: left;
-    height: 550px;
+    height: 600px;
+    width: 1900px;
 }
+
 
 .lun .dian{
     width: 1900px;
     height: 50px;
+    position: absolute;
+    bottom: -30px;
     display: flex;
     justify-content: center;
-    
 }
-.lun .dian div{
-    height: 10px;
-    width: 10px;
+.lun .dian li{
+    text-align: center;
+    height: 15px;
+    width: 15px;
     background: black;
     margin: 5px;
     float: left;
     border-radius: 50%;
+    
       
 }
-.lun .dian div:hover{
+.lun .dian li.hover{
     background-color: red;
+}
+.btns span{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    text-align: center;
+    line-height: 50px;
+    top: 50%;
+    margin-top: -25px;
+    cursor: pointer;
+    background: black;
+    opacity: .3;
+    font-weight: bold;
+    color: white;
+}
+.btns span:first-child{
+    left:20px ;
+}
+.btns span:last-child{
+    right: 20px;
 }
