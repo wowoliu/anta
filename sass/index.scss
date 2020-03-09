@@ -1,0 +1,81 @@
+*{ margin:0; padding:0;}
+a{ text-decoration: none; }
+li{ list-style: none;}
+img{ vertical-align: middle;}
+.an{width: 1200px; margin: auto;}
+
+/*------------deng-------------------*/
+.deng{
+    height: 48px;
+    line-height: 48px;
+    border-bottom: 1px solid #999;
+    
+}
+.deng nav{
+    float: right;
+}
+.deng a{
+    margin: 0 10px;
+}
+
+/*------------top-------------------*/
+.top{height: 100px;
+    
+}
+.top1{
+   
+    height: 100px;
+    line-height: 100px;
+}
+
+.top ul{
+    float: right;
+    
+}
+.top1 ul li{
+    height: 100px;
+    float: left;
+    margin: 0 25px;
+}
+.top1 ul li:hover{
+    color: #181717;border-bottom: 3px solid #181717;
+}
+/*------------lun-------------------*/
+.lun{
+    width: 1900px;
+    height: 650px;
+    overflow: hidden;
+}
+.lun img{
+    height: 600px;
+    width: 1900px;
+    
+}
+.lun .tu{
+    width: 6000px;
+    height: 600px;
+}
+.lun .tu img{
+    float: left;
+    height: 550px;
+}
+
+.lun .dian{
+    width: 1900px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    
+}
+.lun .dian div{
+    height: 10px;
+    width: 10px;
+    background: black;
+    margin: 5px;
+    float: left;
+    border-radius: 50%;
+      
+}
+.lun .dian div:hover{
+    background-color: red;
+}
