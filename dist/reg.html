@@ -3,39 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>安踏</title>
+    <title>注册</title>
     <link rel="stylesheet" href="css/reg.css">
     <script src="libs/jquery-1.11.0.js"></script>
     <script src="js/reg.js"></script>
 </head>
 <body>
-<!-----------------deng-------------------------->
-    <div class="deng">
-       <nav>
-        <a href="">登陆</a>或
-        <a href="">注册</a>ANTA会员
-       </nav>
-    </div>
+   <!-----------------deng-------------------------->
+   <div class="deng">
+    <nav>
+     <a href="login.html">登陆</a>或
+     <a href="reg.html">注册</a>ANTA会员
+    </nav>
+ </div>
 
 <!-----------------top-------------------------->
-    <div class="top">
-        <div class="top1 an">
-            <img src="imgs/nav-i-kt.png" alt="">
-            <ul>
-                <li>男子</li>
-                <li>女子</li>
-                <li>儿童</li>
-                <li>安踏儿童</li>
-                <li>品牌文化</li>
-                <li>观赏视频</li>
-                <li>联系我们</li>
+ <div class="top">
+     <div class="top1 an">
+         <img src="imgs/nav-i-kt.png" alt="">
 
-            </ul>
-        </div>
-    </div>
+         <nav id="yy" class="yy">
+             <ul class="yi">
+                 <li>男子</li>
+                 <li>女子</li>
+                 <li>儿童</li>
+                 <li>安踏儿童</li>
+                 <li>品牌文化</li>
+                 <li>观赏视频</li>
+                 <li>联系我们</li>
+                 
+             </ul>
+             <div class="er">
+             <div>
+                 <ul>
+                     <li>男鞋</li>
+                     <li>女鞋</li>
+                     <li>滑板鞋</li>
+                     <li>男鞋</li>
+                     <li>女鞋</li>
+                     <li>滑板鞋</li>
+
+                 </ul>
+                 <ul>
+                     <li>男鞋</li>
+                     <li>女鞋</li>
+                     <li>滑板鞋</li>
+                     <li>男鞋</li>
+                     <li>女鞋</li>
+                     <li>滑板鞋</li>
+
+
+                 </ul>
+                 <ul>
+                     <li>男鞋</li>
+                     <li>女鞋</li>
+                     <li>滑板鞋</li>
+                     <li>男鞋</li>
+                     <li>女鞋</li>
+                     <li>滑板鞋</li>
+
+                 </ul>
+                 
+             </div>
+             <div>
+                 <ul>
+                     <li>wawazhuang</li>
+                     <li>女zhuang</li>
+                     <li>滑板鞋</li>
+                     <li>男鞋</li>
+                     <li>女鞋</li>
+                     <li>滑板鞋</li>
+
+                 </ul>
+                 <ul>
+                     <li>男鞋</li>
+                     <li>女鞋</li>
+                     <li>滑板鞋</li>
+                     <li>男鞋</li>
+                     <li>女鞋</li>
+                     <li>滑板鞋</li>
+
+
+                 </ul>
+                 <ul>
+                     <li>男鞋</li>
+                     <li>女鞋</li>
+                     <li>滑板鞋</li>
+                     <li>男鞋</li>
+                     <li>女鞋</li>
+                     <li>滑板鞋</li>
+
+                 </ul>
+             </div>
+             <div>
+                 <ul>
+                     <li>ertong</li>
+                     <li>keaing</li>
+                     <li>滑板鞋</li>
+                     <li>男鞋</li>
+                     <li>女鞋</li>
+                     <li>滑板鞋</li>
+
+                 </ul>
+                 <ul>
+                     <li>ertong</li>
+                     <li>keaing</li>
+                     <li>滑板鞋</li>
+                     <li>男鞋</li>
+                     <li>女鞋</li>
+                     <li>滑板鞋</li>>
+
+
+                 </ul>
+                 <ul>
+                     <li>ertong</li>
+                     <li>keaing</li>
+                     <li>滑板鞋</li>
+                     <li>男鞋</li>
+                     <li>女鞋</li>
+                     <li>滑板鞋</li>
+
+                 </ul>
+             </div>
+             
+             </div>
+         </nav>
+     </div>
+     
+ </div>
 <!-----------------lun-------------------------->
     <div class="lun">
-        <img src="imgs/2-paoxie.jpg" alt="">
+        <!-- <img src="imgs/2-paoxie.jpg" alt=""> -->
               <div class="pp">
                   <input type="text" id="username" value=""><br>
                   <input type="password" id="psw" value=""><br>
@@ -45,5 +143,19 @@
               
 
     </div>
+    <script>
+        $(".yi li:lt(3)").mouseover(function(){
+            var index = $(this).index();
+            
+            $(".er div").eq(index).show().siblings().hide();
+
+        })
+        $(".yi li:gt(2)").mouseover(function(){
+            $(".er div").hide();
+        })
+        $(".yi").mouseleave(function(){
+            $(".er div").hide();
+        })
+    </script>
 </body>
 </html>

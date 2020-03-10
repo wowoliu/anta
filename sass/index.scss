@@ -20,28 +20,54 @@ img{ vertical-align: middle;}
 
 /*------------top-------------------*/
 .top{height: 100px;
-    
+   position: relative;
 }
-.top1{
-   
-    height: 100px;
-    line-height: 100px;
-}
-
-.top ul{
+.top nav{
     float: right;
-    
 }
-.top1 ul li{
+.top img{
+    margin-top: 30px;
+}
+.top1 .yy .yi{
+    
     height: 100px;
+    line-height: 95px;
+}
+.top1 .yy .yi li{
     float: left;
     margin: 0 25px;
 }
-.top1 ul li:hover{
-    color: #181717;border-bottom: 3px solid #181717;
+.top1 .er {
+    z-index: 100;
+    background:white;
+    position: absolute;
+    left: 0;
+    
 }
+.top1 .er div{
+    height: 450px;
+    width: 1900px;
+    display: none;
+}
+.top1 .er div ul{
+    float: left;
+    width: 100px;
+}
+.top1 .er div ul li{
+    margin-top: 15px;
+    height: 40px;
+}
+
+
+.top1 .yy .yi li:hover{
+    border-bottom: 5px solid #181717;
+    color: red;
+    
+}
+
 /*------------lun-------------------*/
 .lun{
+    
     position: relative;
     width: 1900px;
     height: 650px;
@@ -106,4 +132,167 @@ img{ vertical-align: middle;}
 }
 .btns span:last-child{
     right: 20px;
+}
+/*------------count-------------------*/
+.count{
+   height:930px;
+   position: relative;
+}
+.count1{
+    height: 930px;
+    position: absolute;
+    bottom: 0;
+    left: 356px;
+    
+}
+.count1 ul{
+    width: 100%;
+    height: 580px;
+   position: absolute;
+   bottom: 0;
+    
+}
+.count1 ul li{
+    float: left;
+    width: 300px;
+    height: 580px;
+}
+.count1 ul li img{
+    
+    width: 300px;
+    height: 580px;
+}
+/*------------new-------------------*/
+.new{
+    height: 830px;
+   
+    position: relative;
+}
+.new1{
+    height:830px;
+    background: white;
+    position: absolute;
+    bottom: -80px;
+    left: 356px;
+}
+.new1 .nz{
+    float: left;
+    margin-top: 24px;
+    margin-left: 18px;
+}
+.new1 .ny{
+    float: left;
+    
+    height: 715px;
+    width: 890px;
+}
+.new1 .ny li{
+    width: 255px;
+    height:315px;
+    background: white;
+    float: left;
+    margin-left: 15px;
+    margin-right: 20px;
+    margin-top: 24px;
+}
+.new1 .ny li img{
+    height: 255px;
+    width: 255px;
+}
+.new1 .ny li p{
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.new1 .ny li span{
+    font-size: 14px;
+}
+.new1 .nx{
+    float: left;
+    width:1000px;
+    border:13px dashed #e6e6e6 ;
+    margin-left: 18px;
+    margin-top: 30px;
+}
+.new1 .nxx{
+    float: left;
+    color: red;
+    font-size: 25px;
+    margin-top: 17px;
+    margin-left: 30px;
+    font-weight: bold;
+}
+/*------------ke-------------------*/
+.ke{
+    height:896px;
+}
+.ke img{
+    height: 100%;
+}
+/*------------hot-------------------*/
+.hot{
+    position: relative;
+    height: 1086px;
+    background-color: black;
+}
+.hot1{
+    width: 1200px;
+    height: 1164px;
+    background: yellow;
+    position: absolute;
+    top: -75px;
+    left: 356px;
+}
+.hot1 .hz{
+    float: left;
+    width: 570px;
+    height: 330px;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+// .hot1 .hz img{
+//     width: 570px;
+//     height: 330px;
+// }
+.hot1 .ht{
+    float: left;
+   background-color: red;
+}
+.hot1 .ht li{
+    float: left;
+    width: 255px;
+    height:310px;
+    background: white;
+    margin-left: 15px;
+    margin-right: 25px;
+    margin-top: 25px;
+}
+.hot1 .hc{
+    float: left;
+    width: 1200px;
+    margin-left: 20px;
+}
+.hot1 .hc li{
+    float: left;
+    width: 255px;
+    height:310px;
+    background: white;
+    margin-left: 15px;
+    margin-right: 20px;
+    margin-top: 25px;
+}
+.hot1 .nx{
+    float: left;
+    width:1000px;
+    border:13px dashed #e6e6e6 ;
+    margin-left: 18px;
+    margin-top: 30px;
+}
+.hot1 .nxx{
+    float: left;
+    color: red;
+    font-size: 25px;
+    margin-top: 25px;
+    margin-left: 30px;
+    font-weight: bold;
 }
