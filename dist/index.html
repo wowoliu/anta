@@ -39,7 +39,7 @@
                 <div class="er">
                 <div>
                     <ul>
-                        <li>男鞋</li>
+                        <li><a href="productlist.html">男鞋</a> </li>
                         <li>女鞋</li>
                         <li>滑板鞋</li>
                         <li>男鞋</li>
@@ -286,7 +286,7 @@
         $(".yi li:gt(2)").mouseover(function(){
             $(".er div").hide();
         })
-        $(".yi").mouseleave(function(){
+        $(".yy").mouseleave(function(){
             $(".er div").hide();
         })
     </script>
@@ -341,7 +341,8 @@
 
 
     // lun.onmouseover = function(){
-	// 	clearInterval(timer)
+    // 	clearInterval(timer)
+    
     // }
     // lun.onmouseout = function(){
     //     timer = setInterval(()=>{
@@ -352,5 +353,31 @@
      //lunbo.addBtn(); 
      lunbo.addFocus(); 
      </script>
+     <!-- <script>
+         //商品列表接口 传用户uid取到的是自己调用添加商品接口添加商品后的数据源
+         $.get("http://jx.xuzhixiang.top/ap/api/productlist.php",{
+             uid:"32911",
+
+         }).then(data=>{
+             console.log(data);
+         });
+        // $.get("http://jx.xuzhixiang.top/ap/api/login.php",{
+        //     username:"aidisheng",
+        //     password:"000000"
+        // }).then(data=>{
+        //     console.log(data);
+        // })
+         //使用自己的数据，通过接口添加数据
+        //  $.post("http://jx.xuzhixiang.top/ap/api/goods/goods-add.php",{
+        //      pname:"wowoz",
+        //      pprice:300,
+        //      pimg:"imgs/imgs/001.gif",
+        //      pdesc:"舒适的鞋子",
+        //      uid:"32911"
+        //  }).then(data=>{
+        //      console.log(data)
+        //  });
+
+     </script> -->
 </body>
 </html>

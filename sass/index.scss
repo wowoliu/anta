@@ -238,7 +238,7 @@ img{ vertical-align: middle;}
 .hot1{
     width: 1200px;
     height: 1164px;
-    background: yellow;
+    background: white;
     position: absolute;
     top: -75px;
     left: 356px;
@@ -256,7 +256,7 @@ img{ vertical-align: middle;}
 // }
 .hot1 .ht{
     float: left;
-   background-color: red;
+   
 }
 .hot1 .ht li{
     float: left;
@@ -295,4 +295,20 @@ img{ vertical-align: middle;}
     margin-top: 25px;
     margin-left: 30px;
     font-weight: bold;
+}
+.hot1 .hc li p{
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.hot1 .hc li span{
+    font-size: 14px;
+}
+.hot1 .ht li p{
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.hot1 .ht li span{
+    font-size: 14px;
 }

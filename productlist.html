@@ -3,12 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登陆</title>
-    <link rel="stylesheet" href="css/login.css">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="css/product.css">
     <script src="libs/jquery-1.11.0.js"></script>
+    <script src="js/cart.js"></script>
+    <!-- <style>
+        *{ margin:0; padding:0;}
+        a{ text-decoration: none; }
+        li{ list-style: none;}
+        img{ vertical-align: middle;}
+        .an{width: 1200px; margin: auto;}
+        #prodlist li{
+            float: left;
+            width: 255px;
+            margin:10px ;
+            height:315px;
+            background: yellowgreen;
+        }
+        #prodlist li img{
+            width: 255px;
+            height: 255px;
+        }
+        #prodlist li p{
+            font-size: 12px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+        #prodlist li span{
+            font-size: 14px;
+            
+        }
+    </style> -->
 </head>
 <body>
-    <!-----------------deng-------------------------->
+        <!-----------------deng-------------------------->
     <div class="deng">
         <nav>
          <a href="login.html">登陆</a>或
@@ -110,12 +138,10 @@
                          <li>滑板鞋</li>
                          <li>男鞋</li>
                          <li>女鞋</li>
-                         <li>滑板鞋</li>>
- 
- 
-                     </ul>
+                         <li>滑板鞋</li>
+                        </ul>
                      <ul>
-                         <li>ertong</li>
+                         <li>erto</li>
                          <li>keaing</li>
                          <li>滑板鞋</li>
                          <li>男鞋</li>
@@ -130,48 +156,97 @@
          </div>
          
      </div>
-     <!-----------------lun-------------------------->
-    <div class="lun">
-        <!-- <img src="imgs/2-paoxie.jpg" alt=""> -->
-              <div class="pp">
-                  <input type="text" id="username" value="" placeholder="邮箱/手机号码/安踏账号"><br>
-                  <input type="password" id="psw" value="" placeholder="密码"><br>
-                  <input type="button" value="立即登陆" id="loginbtn">
-                  <div>其他方式登陆</div>
-                  <div></div>
-              </div>
-              
-    <script> 
-        $(function(){
-            $("#loginbtn").click(function(){
-                $.get("http://jx.xuzhixiang.top/ap/api/login.php",{
-                    username:$("input").eq(0).val(),
-                    password:$("input").eq(1).val()
 
-                },data => {
-                    if(data.code == 1){
-                        location.href = "index.html"
-                    }
-                    else{
-                        alert("用户名或者密码错误请重试")
-                    }
-                })
+ <!-----------------列表-------------------------->
+        <div class="lie">
+            <div class="zuo">筛选</div>
+            <ul id="prodlist">
+                <!-- <li>
+                    <img src="imgs/001.gif">
+                    <p>帅气的女生</p>
+                    <span>￥299</span>
+                    <input type="button" value="加入购物车" class="addBtn" data-id="${id}">
+                </li>
+                <li>
+                    <img src="imgs/001.gif">
+                    <p>帅气的女生</p>
+                    <span>￥299</span>
+                </li>
+                <li>
+                    <img src="imgs/001.gif">
+                    <p>帅气的女生</p>
+                    <span>￥299</span>
+                </li> -->
+            </ul>
+        </div>
+        <script>
+            $(".yi li:lt(3)").mouseover(function(){
+                var index = $(this).index();
+                
+                $(".er div").eq(index).show().siblings().hide();
+    
             })
-        })
-    </script>
+            $(".yi li:gt(2)").mouseover(function(){
+                $(".er div").hide();
+            })
+            $(".yi").mouseleave(function(){
+                $(".er div").hide();
+            })
+        </script>
+    
     <script>
-        $(".yi li:lt(3)").mouseover(function(){
-            var index = $(this).index();
-            
-            $(".er div").eq(index).show().siblings().hide();
+        
+        $.get("http://jx.xuzhixiang.top/ap/api/productlist.php",{
+             uid:"32911",
 
-        })
-        $(".yi li:gt(2)").mouseover(function(){
-            $(".er div").hide();
-        })
-        $(".yi").mouseleave(function(){
-            $(".er div").hide();
-        })
+         }).then(data=>{
+             let olist = document.getElementById("prodlist")
+             var sad = data.data          
+             let str = "";
+            for( let id in sad){
+                str +=`
+                <li>
+                <a href="xiangqing.html?${sad[id].pid}"><img src="${sad[id].pimg}"></a>
+                <p>${sad[id].pdesc}</p>
+                <span>${sad[id].pprice}</span>
+                </li>
+                `;
+            }
+            olist.innerHTML = str;
+            
+
+            
+            
+                
+             //console.log(sad);
+         });
+
+       //登陆
+        //  $.get("http://jx.xuzhixiang.top/ap/api/login.php",{
+        //     username:"aidisheng",
+        //     password:"000000"
+        // }).then(data=>{
+        //     console.log(data);
+        // })
+        //  //使用自己的数据，通过接口添加数据
+        //  $.post("http://jx.xuzhixiang.top/ap/api/goods/goods-add.php",{
+        //      pname:"wowoz",
+        //      pprice:299,
+        //      pimg:"imgs/ggg.gif",
+        //      pdesc:"好看的男孩纸",
+        //      uid:"32911"
+        //  }).then(data=>{
+        //      console.log(data)
+        //  });
+        //删除数据
+            // $.get("http://jx.xuzhixiang.top/ap/api/goods/goods-delete.php",{
+            //     uid:32911,
+            //     pid:197161,
+            //     token:"928e4a2faedbaa987d0b2791e7baf885"
+            // }).then(data=>{
+            //     console.log(data)
+            // })
+            
     </script>
 </body>
 </html>

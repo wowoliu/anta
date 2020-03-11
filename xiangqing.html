@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登陆</title>
-    <link rel="stylesheet" href="css/login.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/xiangqing.css">
     <script src="libs/jquery-1.11.0.js"></script>
 </head>
 <body>
@@ -35,7 +35,7 @@
                  <div class="er">
                  <div>
                      <ul>
-                         <li>男鞋</li>
+                         <li><a href="productlist.html">男鞋</a> </li>
                          <li>女鞋</li>
                          <li>滑板鞋</li>
                          <li>男鞋</li>
@@ -130,36 +130,81 @@
          </div>
          
      </div>
-     <!-----------------lun-------------------------->
-    <div class="lun">
-        <!-- <img src="imgs/2-paoxie.jpg" alt=""> -->
-              <div class="pp">
-                  <input type="text" id="username" value="" placeholder="邮箱/手机号码/安踏账号"><br>
-                  <input type="password" id="psw" value="" placeholder="密码"><br>
-                  <input type="button" value="立即登陆" id="loginbtn">
-                  <div>其他方式登陆</div>
-                  <div></div>
-              </div>
-              
-    <script> 
-        $(function(){
-            $("#loginbtn").click(function(){
-                $.get("http://jx.xuzhixiang.top/ap/api/login.php",{
-                    username:$("input").eq(0).val(),
-                    password:$("input").eq(1).val()
 
-                },data => {
-                    if(data.code == 1){
-                        location.href = "index.html"
-                    }
-                    else{
-                        alert("用户名或者密码错误请重试")
-                    }
+<!-----------------详情-------------------------->
+        <div id="detail">
+            <!-- <img src="" alt="">
+            <p></p>
+            <p></p>
+            <p>
+                <span>-</span>
+                <span><input type="text"></span>
+                <span>+</span>
+                <span><input type="button" value="加入购物车"></span>
+            </p> -->
+        </div>
+
+        <script>
+            //详情页
+            //console.log(location.search)
+            
+            let id = location.search.split("?")[1]
+            console.log(id)
+            $.get("http://jx.xuzhixiang.top/ap/api/detail.php",{
+                id:id,
+            }).then(data=>{
+                let sad = data.data;
+                let odetail = document.getElementById("detail");
+                odetail.innerHTML = `
+                 <img src="${data.data.pimg}">
+                 <input type="button" value="加入购物车" id="num">
+                 <input type="button" value="立即购买" id="bts">
+                `
+                //点击立即购买按钮跳转至购物车页面
+                $("#btn").click(function(){
+                    location.href = "login.html"
                 })
+                //点击加入购物车
+                $("#num").click(function(){
+                   //给购物车添加商品接口
+                $.get("http://jx.xuzhixiang.top/ap/api/add-product.php",{
+                        uid:32911,
+                        pid:id,
+                        pnum:1
+                    }).then(data=>{
+                    console.log(data)
+                    });
+                })
+                //console.log(data)
             })
-        })
-    </script>
-    <script>
+            
+            
+            
+            
+            
+            //查询用户购物车的商品
+            $.get("http://jx.xuzhixiang.top/ap/api/cart-list.php",{
+                    id:32911,
+            }).then(data=>{
+                console.log(data)
+            })
+            //更新购物车中添加商品接口
+            // $.get("http://jx.xuzhixiang.top/ap/api/add-product.php",{
+            //     uid:32911,
+            //     pid:id,
+            //     pnum:10,
+            // }).then(data=>{
+            //    // console.log(data)
+            // })
+            //删除用户购物车中的商品接口
+            // $.get("http://jx.xuzhixiang.top/ap/api/cart-delete.php",{
+            //     uid:32911,
+            //     pid:id,
+            // }).then(data=>{
+            //     console.log(data)
+            // })
+        </script>
+     <script>
         $(".yi li:lt(3)").mouseover(function(){
             var index = $(this).index();
             
