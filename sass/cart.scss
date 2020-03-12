@@ -1,0 +1,110 @@
+*{ margin:0; padding:0;}
+a{ text-decoration: none; }
+li{ list-style: none;}
+img{ vertical-align: middle;}
+.an{width: 1200px; margin: auto;}
+
+/*------------deng-------------------*/
+.deng{
+    height: 48px;
+    line-height: 48px;
+    border-bottom: 1px solid #999;
+    
+}
+.deng nav{
+    float: right;
+}
+.deng a{
+    margin: 0 10px;
+}
+
+/*------------top-------------------*/
+.top{height: 100px;
+   position: relative;
+}
+.top nav{
+    float: right;
+}
+.top img{
+    margin-top: 30px;
+}
+.top1 .yy .yi{
+    
+    height: 100px;
+    line-height: 95px;
+}
+.top1 .yy .yi li{
+    float: left;
+    margin: 0 25px;
+}
+.top1 .er {
+    z-index: 100;
+    background:white;
+    position: absolute;
+    left: 0;
+    
+}
+.top1 .er div{
+    height: 450px;
+    width: 1900px;
+    display: none;
+}
+.top1 .er div ul{
+    float: left;
+    width: 100px;
+}
+.top1 .er div ul li{
+    margin-top: 15px;
+    height: 40px;
+}
+
+
+.top1 .yy .yi li:hover{
+    border-bottom: 5px solid #181717;
+    color: red;
+    
+}
+
+.xuan h1{
+    margin-bottom: 15px;
+}
+.xuan .quanxuan{
+    margin-bottom: 15px;
+}
+.xuan li{
+    height: 150px;
+    width: 100%;
+}
+.xuan img{
+    float: left;
+    height: 75px;width: 75px;
+    margin-left: 30px;
+}
+.xuan li span{
+    float: left;
+    margin-left: 20px;
+}
+.xuan li .fuxuan{
+    float: left;
+    margin-top: 35px;
+}
+.xuan li .bb{
+    font-weight: bold;
+ }
+.xuan li .num{
+    height: 15px;
+    width: 40px;
+}
+.xuan li .shu{
+    margin-top: 15px;
+}
+.xuan li .dan{
+    float: right;
+}
+.xuan li .j{
+    height: 15px;
+    width: 15px;
+    background-color: red;
+    float: left;
+    margin-left: 20px;
+}
